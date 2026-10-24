@@ -1,2 +1,5 @@
 # ROS2-note
-Note
+
+I'm documenting my ros2 learning process,welcome to check it out.
+
+
