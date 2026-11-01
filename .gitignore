@@ -1,4 +1,4 @@
-# ROS2 colcon 自动生成，必须忽略
+# ROS2 colcon生成文件
 build/
 install/
 log/
