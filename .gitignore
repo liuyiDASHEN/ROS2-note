@@ -1,0 +1,10 @@
+# ROS2 colcon 自动生成，必须忽略
+build/
+install/
+log/
+
+# 其他杂项
+*.db
+*.pyc
+__pycache__/
+.DS_Store
