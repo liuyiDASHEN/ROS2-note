@@ -8,10 +8,21 @@ ros2 pkg create xxx_pkg --build-type ament_cmake --dependencies rclcpp (std_msgs
 2、auto node = std::make_shared<xxx>(); (xxx可为自定义类的类型。)
 
 3、
-``` 
+``` cpp
     rclcpp::Publisher<xxx>::SharedPtr publisher_;(xxx可以为std_msgs::msg::String)
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Subscription<xxx>::SharedPtr subscription_;
+```
+```cpp
+//线程
+void callback(...)
+{
+    // ... 入队、窗口维护
+    std::thread worker(&函数, this, /*参数*/);
+    if (worker.joinable()) {
+        worker.join();   // 阻塞等待分析结束并回收线程
+    }
+}
 ```
 
 4、初始化。
@@ -63,4 +74,6 @@ RCLCPP_INFO(this->get_logger(),"%s",oss.str().c_str());
 8、github克隆网站
 git clone https://githubfast.com/liuyiDASHEN/ROS2-note.git
 git clone https://github.com/liuyiDASHEN/ROS2-note
+
+
 
