@@ -36,10 +36,31 @@ using namespace std::chrono_literals;
 #include<mutex>
 #include<sstream>(可用于字符串拼接，打印数组。)
 ```
-```
+
+7、字符串拼接1
+```cpp
 vector<int>arr={1,2,3,4}; 
 std::ostringstream oss;
 for(auto x : arr){oss<<x};
 RCLCPP_INFO(this->get_logger(),"%s",oss.str().c_str());
 ```
+字符串拼接2
+```cpp
+        // 字符串拼接
+        std::ostringstream oss;
+        oss << "[";
+        for (size_t i = 0; i < v1.size(); ++i)
+        {
+            oss << v1[i];
+            if (i + 1 < v1.size())
+            {
+                oss << ", ";
+            }
+        }
+        oss << "]";
+```
+
+8、github克隆网站
+git clone https://githubfast.com/liuyiDASHEN/ROS2-note.git
+git clone https://github.com/liuyiDASHEN/ROS2-note
 
